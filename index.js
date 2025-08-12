@@ -1,14 +1,19 @@
-function beerBottles() {
-  let bottles = 99;
-  while (bottles >= 1) {
-    console.log(`${bottles} bottles of beer on the wall, ${bottles} bottles of beer. Take one down and pass it around, ${bottles -1} bottles of beer on the wall.`);
-    if (bottles === 1) {
-      console.log(`${bottles} bottles of beer on the wall, ${bottles} bottles of beer. Take one down and pass it around, no more bottles of beer on the wall`);
-    } else if (bottles < 1  ) {
-      console.log(`No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more, 99 bottles of beer on the wall.`);
-    }
-    bottles--;
+function fibonacciGenerator(n) {
+  //Do NOT change any of the code above 👆
+  //Write your code here:
+  //Return an array of fibonacci numbers starting from 0.
+  
+  if (n === 1) return [0];
+  if (n === 2) return [0, 1];
+
+  let fibonacciArray = [0, 1]; 
+
+  for (let i = 2; i < n; i++) {
+    let nextFib = fibonacciArray[i - 1] + fibonacciArray[i - 2];
+    fibonacciArray.push(nextFib);
   }
+  return fibonacciArray;
+  //Do NOT change any of the code below 👇
 }
 
-beerBottles();
+console.log(fibonacciGenerator(15));
