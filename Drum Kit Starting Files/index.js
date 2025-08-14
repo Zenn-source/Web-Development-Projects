@@ -1,13 +1,16 @@
 const numberOfButtons = document.querySelectorAll(".drum").length;
 
 document.addEventListener("keydown", (event) => {
-  audioPlay(event.key)
+  audioPlay(event.key);
+  buttonAnimation(event.key);
 });
 
 
 for (let i = 0; i < numberOfButtons; i++) {
-  document.querySelectorAll(".drum")[i].addEventListener("keydown", (event) => {
-    audioPlay(this.innerHTML)
+  document.querySelectorAll(".drum")[i].addEventListener("keydown", function() {
+    const buttonInnerHTML = this.innerHTML;
+    audioPlay(buttonInnerHTML);
+    buttonAnimation(buttonInnerHTML);
   })
 }
 
@@ -45,5 +48,15 @@ function audioPlay(key) {
     default:
       break;
   }
+}
+
+function buttonAnimation(currentKey) {
+  const activeButton = document.querySelector("." + currentKey);
+
+  activeButton.classList.add("pressed");
+
+  setTimeout(() => {
+    activeButton.classList.remove("pressed");
+  }, 100)
 }
 
