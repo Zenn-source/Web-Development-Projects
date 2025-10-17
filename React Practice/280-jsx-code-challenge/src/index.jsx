@@ -17,3 +17,10 @@ ReactDOM.render(
   </div>,
   document.getElementById("root")
 );
+
+ReactDOM.render(
+  <div>
+    <button>Home</button>
+  </div>,
+  document.getElementById('newDiv')
+);
