@@ -1,9 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-//Import the add, multiply, subtract and divide functions
-//from the calculator.js file.
-//If successful, your website should look the same as the Final.png
+import { add, multiply, subtract, divide } from "./calculator";
 
 ReactDOM.render(
   <ul>
@@ -15,8 +12,3 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-// If you're running this locally in VS Code use the commands:
-// npm install
-// to install the node modules and
-// npm run dev
-// to launch your react project in your browser
