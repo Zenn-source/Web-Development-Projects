@@ -54,3 +54,7 @@ footer p {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+
+.note ul li {
+  list-style-type: none;
+}
