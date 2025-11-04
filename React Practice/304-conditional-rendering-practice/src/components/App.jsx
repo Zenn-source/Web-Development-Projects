@@ -1,12 +1,20 @@
 import React from "react";
 import Form from "./Form";
 
-var userIsRegistered = false;
+let userIsRegistered = false;
+
+function renderConditionally() {
+  if (userIsRegistered) {
+    return <Form isRegistered = {userIsRegistered}/>
+  } else {
+    return <Form />;
+  }
+}
 
 function App() {
   return (
     <div className="container">
-      <Form />
+      {renderConditionally()}
     </div>
   );
 }
