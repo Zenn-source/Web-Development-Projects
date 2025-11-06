@@ -5,13 +5,11 @@ import cars from "./practice";
 
 const [honda, tesla] = cars;
 const {
-  model: teslaModel,
   coloursByPopularity: [teslaTopColour, teslaSecondColour],
   speedStats: { topSpeed: teslaTopSpeed, teslaZeroToSixty },
 } = tesla;
 
 const {
-  model: hondaModel,
   coloursByPopularity: [hondaTopColour, hondaSecondColour],
   speedStats: { topSpeed: hondaTopSpeed, hondaZeroToSixty },
 } = honda;
